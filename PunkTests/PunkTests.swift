@@ -6,19 +6,27 @@
 //
 
 import XCTest
-@testable import Punk
+@testable import PunkDebug
 
 class PunkTests: XCTestCase {
 
+    var mockBeerVM: BeerListViewModel!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        mockBeerVM = BeerListViewModel()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockBeerVM = nil
     }
 
     func testExample() throws {
+        mockBeerVM.fetchAllBeers()
+       
+        XCTAssert(mockBeerVM.data.count > 0, "ERROR")
+
+
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.

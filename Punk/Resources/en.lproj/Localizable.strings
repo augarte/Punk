@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Punk
+
+  Created by Aimar Ugarte on 13/3/22.
+  
+*/
+"search.beer.food" = "Search beer by food...";
+"beer.ingredients.hops" = "Hops";
+"beer.ingredients.malt" = "Malt";
+"beer.ingredients.yeast" = "Yeast";
+"beer.abv" = "Alcohol By Volume";
+"beer.ibu" = "International Bittering Unit";
+"filters" = "Filters";

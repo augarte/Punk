@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="IngredientTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="125" id="4QV-0E-QiK" customClass="IngredientTableViewCell" customModule="Punk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4QV-0E-QiK" id="wbL-0t-Efm">
+                <rect key="frame" x="0.0" y="0.0" width="474" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGA-QD-UJX">
+                        <rect key="frame" x="0.0" y="8" width="474" height="109"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjj-lz-frm">
+                                <rect key="frame" x="16" y="16" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUO-C3-rkG">
+                                <rect key="frame" x="16" y="53" width="442" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WUO-C3-rkG" secondAttribute="bottom" constant="16" id="3wk-88-nxY"/>
+                            <constraint firstItem="WUO-C3-rkG" firstAttribute="leading" secondItem="IGA-QD-UJX" secondAttribute="leading" constant="16" id="58c-cf-sEB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kjj-lz-frm" secondAttribute="trailing" constant="16" id="IVk-QT-IHB"/>
+                            <constraint firstItem="Kjj-lz-frm" firstAttribute="leading" secondItem="IGA-QD-UJX" secondAttribute="leading" constant="16" id="MET-yb-340"/>
+                            <constraint firstAttribute="trailing" secondItem="WUO-C3-rkG" secondAttribute="trailing" constant="16" id="O2A-sE-qVi"/>
+                            <constraint firstItem="WUO-C3-rkG" firstAttribute="top" secondItem="Kjj-lz-frm" secondAttribute="bottom" constant="16" id="RYS-g0-U5f"/>
+                            <constraint firstItem="Kjj-lz-frm" firstAttribute="top" secondItem="IGA-QD-UJX" secondAttribute="top" constant="16" id="dcY-52-7qe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IGA-QD-UJX" secondAttribute="bottom" constant="8" id="4Md-x7-U2u"/>
+                    <constraint firstItem="IGA-QD-UJX" firstAttribute="leading" secondItem="wbL-0t-Efm" secondAttribute="leading" id="Pro-s7-ee0"/>
+                    <constraint firstItem="IGA-QD-UJX" firstAttribute="top" secondItem="wbL-0t-Efm" secondAttribute="top" constant="8" id="obD-cp-ErY"/>
+                    <constraint firstAttribute="trailing" secondItem="IGA-QD-UJX" secondAttribute="trailing" id="p60-lq-IVX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="ingredientTitle" destination="Kjj-lz-frm" id="m9x-ig-ArN"/>
+                <outlet property="ingredientView" destination="IGA-QD-UJX" id="Gdd-47-cCw"/>
+                <outlet property="ingredientsLabel" destination="WUO-C3-rkG" id="I6n-nj-nBI"/>
+            </connections>
+            <point key="canvasLocation" x="-55.072463768115945" y="11.71875"/>
+        </tableViewCell>
+    </objects>
+</document>
