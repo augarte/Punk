@@ -7,20 +7,12 @@
 
 import UIKit
 
-public enum FilterType: Int {
-    case abv = 0
-    case ibu = 1
-}
-
 class BeerFilterViewController: PunkViewController {
     
     @IBOutlet weak var filters: UILabel!
+    @IBOutlet weak var filtersTableview: UITableView!
     
-    @IBOutlet weak var abvLabel: UILabel!
-    @IBOutlet weak var abvSlider: UISlider!
-    
-    @IBOutlet weak var ibuLabel: UILabel!
-    @IBOutlet weak var ibuSlider: UISlider!
+    var filterListViewModel = FilterListViewModel()
     
     //TODO: Requiere de un viewModel para la logica de los filtros (cuantos, cuales, como...)
     
@@ -32,43 +24,53 @@ class BeerFilterViewController: PunkViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupSliders()
+        setupTable()
         applyStyle()
     }
     
-    func setupSliders() {
+    func setupTable() {
+        filtersTableview.register(UINib.init(nibName: FilterTableViewCell.typeName, bundle: nil), forCellReuseIdentifier: FilterTableViewCell.typeName)
         
-        abvSlider.tag = FilterType.abv.rawValue
-        ibuSlider.tag = FilterType.ibu.rawValue
+        filtersTableview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+        filtersTableview.separatorStyle = .none
+        filtersTableview.allowsSelection = false
         
-        abvSlider.addTarget(self, action: #selector(sliderValueChanged), for: UIControl.Event.touchUpInside);
-        ibuSlider.addTarget(self, action: #selector(sliderValueChanged), for: UIControl.Event.touchUpInside);
-        
+        filtersTableview.dataSource = self
+        filtersTableview.delegate = self
     }
     
     func applyStyle() {
-        filters.font = UIFont(name:"Helvetica Bold", size: 20.0)
-        ibuLabel.font = UIFont(name:"Helvetica", size: 16.0)
-        abvLabel.font = UIFont(name:"Helvetica", size: 16.0)
-        
-        filters.textColor = UIColor.black
-        ibuLabel.textColor = UIColor.black
-        abvLabel.textColor = UIColor.black
-        
         filters.text = NSLocalizedString("filters", comment: "")
-        abvLabel.text = NSLocalizedString("beer.abv", comment: "")
-        ibuLabel.text = NSLocalizedString("beer.ibu", comment: "")
+        filters.font = UIFont(name:"Helvetica Bold", size: 20.0)
+        filters.textColor = UIColor.black
     }
 }
 
-extension BeerFilterViewController {
+//MARK: - TableView
+extension BeerFilterViewController: UITableViewDataSource, UITableViewDelegate {
     
-    @objc func sliderValueChanged(sender: UISlider) {
-        guard let type = FilterType(rawValue: sender.tag) else {
-            return
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "updatedFilters"), object: nil, userInfo: ["type": type, "value": sender.value])
+        return filterListViewModel.list.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FilterTableViewCell.typeName) as? FilterTableViewCell else {
+            assertionFailure("Cannot dequeue reusable cell \(FilterTableViewCell.self) with reuseIdentifier: \(FilterTableViewCell.typeName)")
+            return UITableViewCell()
+        }
+        
+        guard filterListViewModel.list.count > indexPath.row  else {
+            return UITableViewCell()
+        }
+        let filterViewModel = filterListViewModel.list[indexPath.row]
+        cell.configureCell(filterViewModel:filterViewModel)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 123
+    }
 }

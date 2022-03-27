@@ -9,11 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BeerFilterViewController" customModule="Punk" customModuleProvider="target">
             <connections>
-                <outlet property="abvLabel" destination="YGa-NX-5je" id="Nxh-nM-K2R"/>
-                <outlet property="abvSlider" destination="ghv-hY-AH4" id="xac-3p-Yal"/>
                 <outlet property="filters" destination="BUj-pr-O4w" id="FL9-mn-JbX"/>
-                <outlet property="ibuLabel" destination="C72-t5-wNg" id="3nN-hz-WQg"/>
-                <outlet property="ibuSlider" destination="wI5-ji-VHp" id="8d4-cX-Bs3"/>
+                <outlet property="filtersTableview" destination="Xuz-Cd-4Q9" id="joh-Y8-KxM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2TK-g0-YRF"/>
             </connections>
         </placeholder>
@@ -28,42 +25,23 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGa-NX-5je">
-                    <rect key="frame" x="16" y="193" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ghv-hY-AH4">
-                    <rect key="frame" x="14" y="230" width="386" height="31"/>
-                </slider>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C72-t5-wNg">
-                    <rect key="frame" x="16" y="292" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wI5-ji-VHp">
-                    <rect key="frame" x="14" y="329" width="386" height="31"/>
-                </slider>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xuz-Cd-4Q9">
+                    <rect key="frame" x="0.0" y="145" width="414" height="701"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="C72-t5-wNg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="4OM-dw-iRV"/>
-                <constraint firstItem="YGa-NX-5je" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="6LW-bD-LA9"/>
-                <constraint firstItem="wI5-ji-VHp" firstAttribute="top" secondItem="C72-t5-wNg" secondAttribute="bottom" constant="16" id="6nb-UV-6Yl"/>
+                <constraint firstItem="Xuz-Cd-4Q9" firstAttribute="top" secondItem="BUj-pr-O4w" secondAttribute="bottom" constant="16" id="1P6-Lc-mXI"/>
+                <constraint firstItem="Xuz-Cd-4Q9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1ub-ob-OpI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xuz-Cd-4Q9" secondAttribute="trailing" id="5wj-Wf-Hkq"/>
                 <constraint firstItem="BUj-pr-O4w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="64" id="6tK-li-rek"/>
-                <constraint firstItem="C72-t5-wNg" firstAttribute="top" secondItem="ghv-hY-AH4" secondAttribute="bottom" constant="32" id="GMM-vu-7Yc"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wI5-ji-VHp" secondAttribute="trailing" constant="16" id="Huw-DX-0ny"/>
-                <constraint firstItem="wI5-ji-VHp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PcL-5w-AY9"/>
-                <constraint firstItem="ghv-hY-AH4" firstAttribute="top" secondItem="YGa-NX-5je" secondAttribute="bottom" constant="16" id="VjD-aE-nGw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xuz-Cd-4Q9" secondAttribute="bottom" constant="16" id="UQ1-W7-DKm"/>
                 <constraint firstItem="BUj-pr-O4w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VqF-Zo-4bi"/>
-                <constraint firstItem="YGa-NX-5je" firstAttribute="top" secondItem="BUj-pr-O4w" secondAttribute="bottom" constant="64" id="bB4-9a-ILj"/>
-                <constraint firstItem="ghv-hY-AH4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="phg-7i-TGk"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ghv-hY-AH4" secondAttribute="trailing" constant="16" id="pos-6U-VhT"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="58"/>
+            <point key="canvasLocation" x="137.68115942028987" y="57.589285714285708"/>
         </view>
     </objects>
 </document>

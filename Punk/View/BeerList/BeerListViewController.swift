@@ -69,12 +69,16 @@ class BeerListViewController: PunkViewController {
     }
 }
 
+//MARK: - ViewModelDelegate
 extension BeerListViewController: ViewModelDelegate {
     
-    //MARK: - ViewModelDelegate
     func refreshTable() {
         beerTableView.reloadData()
     }
+}
+
+//MARK: - Notifications
+extension BeerListViewController {
     
     @objc func updatedFilters(notification: Notification) {
         guard let type = notification.userInfo?["type"] as? FilterType
@@ -86,9 +90,9 @@ extension BeerListViewController: ViewModelDelegate {
     }
 }
 
+//MARK: - TableView
 extension BeerListViewController: UITableViewDataSource, UITableViewDelegate {
     
-    //MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if searchController.isActive || beerViewModel.filtersActive {
@@ -119,7 +123,6 @@ extension BeerListViewController: UITableViewDataSource, UITableViewDelegate {
         return !(searchController.isActive || beerViewModel.filtersActive)
     }
     
-    //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 600
     }
@@ -138,18 +141,16 @@ extension BeerListViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         navigateToViewController(viewController: BeerDetailViewController.create(with: BeerDetailViewModel.init(beer: beer)))
-        
     }
 }
 
+//MARK: - SearchView
 extension BeerListViewController: UISearchBarDelegate, UISearchResultsUpdating {
     
-    //MARK: - UISearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
        
     }
     
-    //MARK: - UISearchResultsUpdating
     func updateSearchResults(for searchController: UISearchController) {
         if let search = searchController.searchBar.text, !search.isEmpty {
             beerViewModel.didSearch(query: search)
@@ -158,5 +159,4 @@ extension BeerListViewController: UISearchBarDelegate, UISearchResultsUpdating {
             beerTableView.reloadData()
         }
     }
-    
 }

@@ -25,6 +25,11 @@
 		209BEC5727E23111000DE4C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7D327D81E48000CB3B1 /* UIColor.swift */; };
 		209C678D27E7F99F006127EA /* BeerFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209C678C27E7F99F006127EA /* BeerFilterViewController.swift */; };
 		209C678F27E7F9A8006127EA /* BeerFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209C678E27E7F9A8006127EA /* BeerFilterViewController.xib */; };
+		20B7C24E27F115FE00350A9F /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C24D27F115FE00350A9F /* FilterTableViewCell.swift */; };
+		20B7C25027F1160A00350A9F /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B7C24F27F1160A00350A9F /* FilterTableViewCell.xib */; };
+		20B7C25327F1178200350A9F /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C25227F1178200350A9F /* FilterViewModel.swift */; };
+		20B7C25527F118C800350A9F /* FilterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C25427F118C800350A9F /* FilterListViewModel.swift */; };
+		20B7C25727F11BCF00350A9F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C25627F11BCF00350A9F /* Filter.swift */; };
 		20BF3B2C27DE2E6700F1CEDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20BF3B2E27DE2E6700F1CEDF /* Localizable.strings */; };
 		20BF3B3127DE3A5100F1CEDF /* BeerListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF3B3027DE3A5100F1CEDF /* BeerListItemViewModel.swift */; };
 		20C4C7A627D5055C000CB3B1 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7A527D5055C000CB3B1 /* BeerListViewModel.swift */; };
@@ -91,6 +96,11 @@
 		2085FE7127D4298500094BF6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		209C678C27E7F99F006127EA /* BeerFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerFilterViewController.swift; sourceTree = "<group>"; };
 		209C678E27E7F9A8006127EA /* BeerFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerFilterViewController.xib; sourceTree = "<group>"; };
+		20B7C24D27F115FE00350A9F /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		20B7C24F27F1160A00350A9F /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		20B7C25227F1178200350A9F /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		20B7C25427F118C800350A9F /* FilterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewModel.swift; sourceTree = "<group>"; };
+		20B7C25627F11BCF00350A9F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		20BF3B2927DE2DB600F1CEDF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		20BF3B2D27DE2E6700F1CEDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		20BF3B2F27DE2E6800F1CEDF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -256,6 +266,7 @@
 			children = (
 				206D486727DEBAF600EE061A /* BeerList */,
 				206D486827DEBB0B00EE061A /* BeerDetail */,
+				20B7C25127F1176E00350A9F /* Filters */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -265,8 +276,27 @@
 			children = (
 				209C678C27E7F99F006127EA /* BeerFilterViewController.swift */,
 				209C678E27E7F9A8006127EA /* BeerFilterViewController.xib */,
+				20B7C24C27F115C600350A9F /* FilterListTableCells */,
 			);
 			path = BeerFilterViewController;
+			sourceTree = "<group>";
+		};
+		20B7C24C27F115C600350A9F /* FilterListTableCells */ = {
+			isa = PBXGroup;
+			children = (
+				20B7C24D27F115FE00350A9F /* FilterTableViewCell.swift */,
+				20B7C24F27F1160A00350A9F /* FilterTableViewCell.xib */,
+			);
+			path = FilterListTableCells;
+			sourceTree = "<group>";
+		};
+		20B7C25127F1176E00350A9F /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				20B7C25427F118C800350A9F /* FilterListViewModel.swift */,
+				20B7C25227F1178200350A9F /* FilterViewModel.swift */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 		20C4C7A127D4FDEB000CB3B1 /* Network */ = {
@@ -284,6 +314,7 @@
 			children = (
 				20C4C7A727D51487000CB3B1 /* BeerPage.swift */,
 				20C4C7A327D4FE1C000CB3B1 /* Beer.swift */,
+				20B7C25627F11BCF00350A9F /* Filter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -476,6 +507,7 @@
 				20F5998B27DE67C400BFAABE /* BeerListViewController.xib in Resources */,
 				20F5998527DE64FE00BFAABE /* BeerDetailViewController.xib in Resources */,
 				20C4C7AE27D5273E000CB3B1 /* BeerTableViewCell.xib in Resources */,
+				20B7C25027F1160A00350A9F /* FilterTableViewCell.xib in Resources */,
 				20C4C7D727D8226C000CB3B1 /* SplashViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +534,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C4C7A627D5055C000CB3B1 /* BeerListViewModel.swift in Sources */,
+				20B7C25727F11BCF00350A9F /* Filter.swift in Sources */,
 				20F5998927DE65CA00BFAABE /* BeerDetailViewModel.swift in Sources */,
+				20B7C25527F118C800350A9F /* FilterListViewModel.swift in Sources */,
 				20C4C7D427D81E48000CB3B1 /* UIColor.swift in Sources */,
 				20C4C7C827D7F209000CB3B1 /* Extensions.swift in Sources */,
 				20F5998727DE655B00BFAABE /* BeerDetailViewController.swift in Sources */,
@@ -516,10 +550,12 @@
 				20C4C7C427D58238000CB3B1 /* PunkAPIEndpoints.swift in Sources */,
 				20C4C7DB27D8228D000CB3B1 /* SplashViewController.swift in Sources */,
 				206D486127DEAB3E00EE061A /* IngredientTableViewCell.swift in Sources */,
+				20B7C25327F1178200350A9F /* FilterViewModel.swift in Sources */,
 				2085FE6F27D4225E00094BF6 /* NetworkService.swift in Sources */,
 				2085FE7227D4298500094BF6 /* Endpoint.swift in Sources */,
 				20C4C7A827D51487000CB3B1 /* BeerPage.swift in Sources */,
 				209C678D27E7F99F006127EA /* BeerFilterViewController.swift in Sources */,
+				20B7C24E27F115FE00350A9F /* FilterTableViewCell.swift in Sources */,
 				20C4C7C127D57B6C000CB3B1 /* PunkAPIService.swift in Sources */,
 				20C4C7BC27D5605E000CB3B1 /* AppConfiguration.swift in Sources */,
 			);
@@ -732,7 +768,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mo2o.Punk.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = app.augarte.punk.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -766,7 +802,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mo2o.Punk;
+				PRODUCT_BUNDLE_IDENTIFIER = app.augarte.punk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -780,13 +816,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 384JVVGP7X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = augarte.mo2o.PunkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.augarte.PunkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -800,13 +837,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 384JVVGP7X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = augarte.mo2o.PunkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.augarte.PunkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -824,7 +862,7 @@
 				DEVELOPMENT_TEAM = 384JVVGP7X;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = augarte.mo2o.PunkUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.augarte.PunkUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -842,7 +880,7 @@
 				DEVELOPMENT_TEAM = 384JVVGP7X;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = augarte.mo2o.PunkUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.augarte.PunkUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

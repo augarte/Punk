@@ -42,7 +42,7 @@ extension BeerListViewModel{
         let auxList = data.filter {
             switch filterType {
             case .abv:
-                return ($0.abv ?? 0.0) <= 4.1//Double(value)
+                return ($0.abv ?? 0.0) <= Double(value)
             case .ibu:
                 return ($0.ibu ?? 0.0) <= Double(value)
             }
