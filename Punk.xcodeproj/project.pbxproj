@@ -47,7 +47,6 @@
 		20C4C7CB27D7F72F000CB3B1 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 20C4C7CA27D7F72F000CB3B1 /* AlamofireImage */; };
 		20C4C7D227D810CD000CB3B1 /* PunkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7D127D810CD000CB3B1 /* PunkViewController.swift */; };
 		20C4C7D427D81E48000CB3B1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7D327D81E48000CB3B1 /* UIColor.swift */; };
-		20C4C7D727D8226C000CB3B1 /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C4C7D627D8226C000CB3B1 /* SplashViewController.storyboard */; };
 		20C4C7DB27D8228D000CB3B1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7DA27D8228D000CB3B1 /* SplashViewController.swift */; };
 		20D5F9D827E2085E007E6195 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7A527D5055C000CB3B1 /* BeerListViewModel.swift */; };
 		20D5F9D927E20866007E6195 /* PunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7C027D57B6C000CB3B1 /* PunkAPIService.swift */; };
@@ -61,6 +60,9 @@
 		20F5998727DE655B00BFAABE /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5998627DE655B00BFAABE /* BeerDetailViewController.swift */; };
 		20F5998927DE65CA00BFAABE /* BeerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5998827DE65CA00BFAABE /* BeerDetailViewModel.swift */; };
 		20F5998B27DE67C400BFAABE /* BeerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F5998A27DE67C400BFAABE /* BeerListViewController.xib */; };
+		EA3D140C2823275200387419 /* NavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3D140B2823275200387419 /* NavigationController.storyboard */; };
+		EA3D140E2823278000387419 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3D140D2823278000387419 /* SplashViewController.xib */; };
+		EA3D1410282327C300387419 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D140F282327C300387419 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,12 +122,14 @@
 		20C4C7C727D7F209000CB3B1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		20C4C7D127D810CD000CB3B1 /* PunkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkViewController.swift; sourceTree = "<group>"; };
 		20C4C7D327D81E48000CB3B1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		20C4C7D627D8226C000CB3B1 /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 		20C4C7DA27D8228D000CB3B1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		20F5998427DE64FE00BFAABE /* BeerDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerDetailViewController.xib; sourceTree = "<group>"; };
 		20F5998627DE655B00BFAABE /* BeerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
 		20F5998827DE65CA00BFAABE /* BeerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewModel.swift; sourceTree = "<group>"; };
 		20F5998A27DE67C400BFAABE /* BeerListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerListViewController.xib; sourceTree = "<group>"; };
+		EA3D140B2823275200387419 /* NavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationController.storyboard; sourceTree = "<group>"; };
+		EA3D140D2823278000387419 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		EA3D140F282327C300387419 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				20C4C7D127D810CD000CB3B1 /* PunkViewController.swift */,
+				EA3D140A2823273500387419 /* NavigationController */,
 				20C4C7D527D8225C000CB3B1 /* Splash */,
 				20C4C7B827D53854000CB3B1 /* BeerList */,
 				20C4C7CC27D80DBD000CB3B1 /* BeerDetail */,
@@ -383,9 +388,18 @@
 			isa = PBXGroup;
 			children = (
 				20C4C7DA27D8228D000CB3B1 /* SplashViewController.swift */,
-				20C4C7D627D8226C000CB3B1 /* SplashViewController.storyboard */,
+				EA3D140D2823278000387419 /* SplashViewController.xib */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		EA3D140A2823273500387419 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				EA3D140B2823275200387419 /* NavigationController.storyboard */,
+				EA3D140F282327C300387419 /* NavigationController.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,7 +516,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C4C7BE27D56158000CB3B1 /* Monaco.ttf in Resources */,
+				EA3D140E2823278000387419 /* SplashViewController.xib in Resources */,
 				2085FE4327D41ADE00094BF6 /* LaunchScreen.storyboard in Resources */,
+				EA3D140C2823275200387419 /* NavigationController.storyboard in Resources */,
 				2085FE4027D41ADE00094BF6 /* Assets.xcassets in Resources */,
 				206D485F27DEAB2E00EE061A /* IngredientTableViewCell.xib in Resources */,
 				209C678F27E7F9A8006127EA /* BeerFilterViewController.xib in Resources */,
@@ -511,7 +527,6 @@
 				20F5998527DE64FE00BFAABE /* BeerDetailViewController.xib in Resources */,
 				20C4C7AE27D5273E000CB3B1 /* BeerTableViewCell.xib in Resources */,
 				20B7C25027F1160A00350A9F /* FilterTableViewCell.xib in Resources */,
-				20C4C7D727D8226C000CB3B1 /* SplashViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +565,7 @@
 				20C4C7AA27D52615000CB3B1 /* BeerTableViewCell.swift in Sources */,
 				20C4C7D227D810CD000CB3B1 /* PunkViewController.swift in Sources */,
 				20BF3B3127DE3A5100F1CEDF /* BeerListItemViewModel.swift in Sources */,
+				EA3D1410282327C300387419 /* NavigationController.swift in Sources */,
 				20C4C7C427D58238000CB3B1 /* PunkAPIEndpoints.swift in Sources */,
 				20C4C7DB27D8228D000CB3B1 /* SplashViewController.swift in Sources */,
 				206D486127DEAB3E00EE061A /* IngredientTableViewCell.swift in Sources */,
@@ -764,7 +780,7 @@
 				INFOPLIST_FILE = Punk/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = SplashViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = NavigationController;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
@@ -798,7 +814,7 @@
 				INFOPLIST_FILE = Punk/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = SplashViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = NavigationController;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;

@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 class SplashViewController: PunkViewController {
     
+    static func create() -> SplashViewController {
+        let splashVC = SplashViewController(nibName: SplashViewController.typeName, bundle: nil)
+        return splashVC
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.setViewControllers([BeerListViewController.create()], animated: true)
     }
+    
 }
