@@ -29,7 +29,8 @@ class BeerListViewController: PunkViewController {
         setupSeachBar()
         setupTable()
         setupObservers()
-        setupFilterIcon()
+        //TODO: Add filters screen
+        //setupFilterIcon()
     }
     
     func setupSeachBar() {

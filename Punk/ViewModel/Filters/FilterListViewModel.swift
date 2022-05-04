@@ -27,8 +27,7 @@ extension FilterListViewModel {
         
         var filters: [Filter] = []
         filters.append(Filter.init(filterType: FilterType.abv, name: NSLocalizedString("beer.abv", comment: ""), min: 0, max: 55, startingValue: 55))
-        filters.append(Filter.init(filterType: FilterType.ibu, name: NSLocalizedString("beer.ibu", comment: ""), min: 0, max: 300, startingValue: 300))
-        
+        filters.append(Filter.init(filterType: FilterType.ibu, name: NSLocalizedString("beer.ibu", comment: ""), min: 0, max: 150, startingValue: 150))
         return filters
     }
 }

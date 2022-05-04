@@ -21,23 +21,30 @@ class PunkTests: XCTestCase {
         mockBeerVM = nil
     }
 
-    func testExample() throws {
-        mockBeerVM.fetchAllBeers()
-       
-        XCTAssert(mockBeerVM.data.count > 0, "ERROR")
-
-
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testFetchAllBeers() throws {
+        PunkAPIService.shared().fetchBeers() { data in
+            let beers = data.map(BeerListItemViewModel.init)
+            XCTAssert(beers.count == 25, "ERROR")
+        }
     }
-
+    
+    func testFetchBeersWithFilter() throws {
+        let foodName = "beer"
+        let searchParameter = foodName.replacingOccurrences(of: " ", with: "_")
+        let query = ["food": searchParameter];
+        PunkAPIService.shared().fetchBeersWithFilters(parameters: query) { data in
+            let beers = data.map(BeerListItemViewModel.init)
+            XCTAssert(beers.count == 4, "ERROR")
+        }
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            PunkAPIService.shared().fetchBeers() { data in
+                _ = data.map(BeerListItemViewModel.init)
+            }
         }
     }
 

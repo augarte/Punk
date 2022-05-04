@@ -23,6 +23,9 @@
 		209BEC5527E230FD000DE4C6 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7BB27D5605E000CB3B1 /* AppConfiguration.swift */; };
 		209BEC5627E2310E000DE4C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7C727D7F209000CB3B1 /* Extensions.swift */; };
 		209BEC5727E23111000DE4C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4C7D327D81E48000CB3B1 /* UIColor.swift */; };
+		209BF45627F4695F004C3640 /* FilterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C25427F118C800350A9F /* FilterListViewModel.swift */; };
+		209BF45727F46964004C3640 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C25227F1178200350A9F /* FilterViewModel.swift */; };
+		209BF45827F4697A004C3640 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C25627F11BCF00350A9F /* Filter.swift */; };
 		209C678D27E7F99F006127EA /* BeerFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209C678C27E7F99F006127EA /* BeerFilterViewController.swift */; };
 		209C678F27E7F9A8006127EA /* BeerFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209C678E27E7F9A8006127EA /* BeerFilterViewController.xib */; };
 		20B7C24E27F115FE00350A9F /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7C24D27F115FE00350A9F /* FilterTableViewCell.swift */; };
@@ -567,9 +570,12 @@
 			files = (
 				209BEC5527E230FD000DE4C6 /* AppConfiguration.swift in Sources */,
 				20D5F9E227E21AC5007E6195 /* Endpoint.swift in Sources */,
+				209BF45627F4695F004C3640 /* FilterListViewModel.swift in Sources */,
+				209BF45727F46964004C3640 /* FilterViewModel.swift in Sources */,
 				20D5F9D927E20866007E6195 /* PunkAPIService.swift in Sources */,
 				20D5F9DD27E219B9007E6195 /* PunkTests.swift in Sources */,
 				209BEC5427E230F2000DE4C6 /* BeerListItemViewModel.swift in Sources */,
+				209BF45827F4697A004C3640 /* Filter.swift in Sources */,
 				209BEC5627E2310E000DE4C6 /* Extensions.swift in Sources */,
 				20D5F9DF27E21AB7007E6195 /* Beer.swift in Sources */,
 				209BEC5727E23111000DE4C6 /* UIColor.swift in Sources */,

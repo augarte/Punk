@@ -12,6 +12,7 @@ class PunkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "PUNK"
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
